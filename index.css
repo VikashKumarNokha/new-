@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.col-show i{
+    cursor: pointer;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+}    
+.containt{
+    max-width: 1300px;
+    padding: 3px 5px;
+    margin: auto;
+}
+.header{
+    margin: auto;
+    background:white;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    top: 0;
+    position: sticky;
+    z-index:4;
+}
+/**--------content-----------**/ 
+.header2{
+    background:whitesmoke;
+    margin: auto;
+}
+div h1{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0;
+}
+
+ .image-slide-content{
+    width: 98%;
+    height: 300px;
+    margin: 20px 0 0 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.image-slide-content::-webkit-scrollbar{
+    display: none;
+}
+.image-slide-content .image-product{
+    width: 24%;
+    height: 100%;
+    margin: 0 20px 0 0;
+    border-radius: 20px;
+}
+.image-product img{
+    width: 100%;
+}
+
+.image-slide-content2{
+    width: 98%;
+    height: 300px;
+    margin: 20px 0 0 0;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+}
+.image-slide-content2::-webkit-scrollbar{
+    display: none;
+}
+.image-slide-content2 .image-product2{
+    width: 24%;
+    height: 100%;
+    margin: 0 20px 0 0;
+    border-radius: 20px;
+}
+.image-product2 img{
+    width: 100%;
+}
+
+.col-2{
+    flex-basis: 40%;
+}
+.col-3{
+    flex-basis: 40%;
+}
+ .col-2 p{
+    padding: 20px 100px;
+    text-align: center;
+    background: yellow;
+    border-radius: 10px;
+} 
+.col-3 p{
+    padding: 20px 100px;
+    text-align: center;
+    background:blue;
+    border-radius: 10px;
+} 
+
+.slide-content{
+    width: 98%;
+    height: 200px;
+    margin: 20px auto auto auto;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+}
+ .slide-content::-webkit-scrollbar{
+    display: none;
+ }
+.slide-content .product{
+    min-width: 24%;
+    height: 90%;
+    background: wheat;
+    margin:0 15px 0 0;
+    border-radius: 20px;
+    transition:0.5s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.col-4{
+    flex-basis: 30%;
+    padding: 15px 0;
+    margin: 10px 0;
+}
+.col-4 p{
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+.col-4 i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: blue;
+}
+/**----Footer-----**/
+footer{
+    margin: auto;
+    background-color: white;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+footer{
+    bottom: 0;
+    position: sticky;
+}
+.col-5{
+    padding: 10px 0;
+    flex-basis: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col-5 .fa-home{
+    font-size: 30px;
+    color: red;
+    cursor: pointer;
+}
+.col-5 .fa-whatsapp{
+    font-size: 30px;
+    color: green;
+    cursor: pointer;
+}
+.col-5 .fa-search{
+    font-size: 30px;
+    color: blue;
+    cursor: pointer;
+}
+.col-5 .fa-user-circle{
+    font-size: 30px;
+    color: brown;
+    cursor: pointer;
+}
+/**----side-bar-----**/
+.side-bar{
+    position: absolute;
+    background: yellow;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    left:-200px;
+    z-index: 5;
+    text-align: left;
+    transition: 1s;
+}
+.cross-icon i{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+}
+div ul li{
+    display: block;
+    margin: 20px;
+    cursor: pointer;
+}
+
+/**-----media query----**/
+@media (max-width:700px) {
+    .col-2 p{
+        padding: 20px 50px;
+    }
+    .col-3 p{
+        padding: 20px 50px;
+    }
+    .col-2 p, .col-3 p{
+        font-size: 12px;
+        padding: 20px 20px;
+    }
+    .slide-content .product{
+        min-width: 98%;
+        margin: 0 10px;
+    }
+    .image-slide-content2 .image-product2{
+        min-width: 100%;
+    }
+
+    .image-slide-content{
+        position: relative;
+    }
+    .image-slide-content .image-product{
+        position: absolute;
+        min-width: 100%;
+        clip-path: circle(0% at 0 50%);
+    }
+    .image-slide-content .image-product.active{
+        clip-path: circle(150% at 0 50%);
+        transition: 1s;
+    }
+    .navigation-visibility{
+        position: absolute;
+        left: 40%;
+        bottom: 100px;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .navigation-visibility .slide-icon{
+        z-index: 1;
+        background:wheat;
+        width: 20px;
+        height: 10px;
+        transform: translateY(50px);
+        margin: 0 6px;
+        border-radius: 2px;
+        box-shadow: 0 5px 25px rgb(1 1 1/20%);
+    }
+    .navigation-visibility .slide-icon.active{
+        background: red;
+    }
+}
